@@ -1,0 +1,53 @@
+# Build results
+bin/
+obj/
+[Bb]in/
+[Oo]bj/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Visual Studio files
+.vs/
+.vscode/
+
+# Build folders
+Debug/
+Release/
+x64/
+x86/
+[Aa][Rr][Mm]/
+[Aa][Rr][Mm]64/
+
+# NuGet packages
+packages/
+*.nupkg
+*.snupkg
+*.nuspec
+
+# Logs
+*.log
+
+# Publish output
+publish/
+PublishProfiles/
+
+# Temporary files
+*.tmp
+*.temp
+*.bak
+*.swp
+
+# Resharper / Rider
+_ReSharper*/
+*.DotSettings.user
+
+# Test results
+TestResult*/
+*.trx
+
+# Local configuration
+appsettings.Local.json
+secrets.json
+*.db
