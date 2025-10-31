@@ -12,6 +12,16 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+// 🧩 Configura CORS
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("PermitirLocalhost3000",
+        policy => policy
+            .WithOrigins("http://localhost:3000") // seu front
+            .AllowAnyHeader()
+            .AllowAnyMethod());
+});
+
 var app = builder.Build();
 
 // 🧩 Configura o Swagger
@@ -22,6 +32,9 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+
+// 🔹 **Ativa CORS aqui**
+app.UseCors("PermitirLocalhost3000");
 
 app.UseAuthorization();
 
